@@ -17,3 +17,10 @@ local GetSpellInfo = function(spellIdentifier)
     local rt = C_Spell.GetSpellInfo(spellIdentifier)
     return rt.name, rt.iconID, rt.originalIconID, rt.castTime, rt.minRange, rt.maxRange, rt.spellID
 end
+local GetFactionDataByID = function(...)
+	local rt = C_Reputation.GetFactionDataByID(...)
+	return rt.factionID, rt.name, rt.description, rt.reaction, rt.currentReactionThreshold, rt.nextReactionThreshold, rt.currentStanding, rt.atWarWith, rt.canToggleAtWar, rt.isChild, rt.isHeader, rt.isHeaderWithRep, rt.isCollapsed, rt.isWatched, rt.hasBonusRepGain,rt.canSetInactive ,rt.isAccountWide
+end
+local GetNumAddOns=C_AddOns.GetNumAddOns
+
+
